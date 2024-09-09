@@ -1,0 +1,62 @@
+<section id="schedule-table-section">
+    <p-table [value]="schedule" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th class="text-white bg-indigo-800 w-30rem">Monday</th>
+                <th class="text-white bg-indigo-800 w-30rem">Tuesday</th>
+                <th class="text-white bg-indigo-800 w-30rem">Wednesday</th>
+                <th class="text-white bg-indigo-800 w-30rem">Thursday</th>
+                <th class="text-white bg-indigo-800 w-30rem">Friday</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-taskRow>
+            <tr>
+    
+                <!-- Monday Schedule  -->
+                <td class="w-30rem">
+                    <div class="bg-blue-50 border-round-lg p-3 my-2 w-20rem lg:w-auto" *ngFor="let task of taskRow.monday">
+                        <h3 class="text-base lg:text-lg font-semibold my-0">{{ task.title }}</h3>
+                        <p class="my-2 text-sm">{{ task.detail }}</p>
+                        <p class="flex justify-content-end font-semibold text-sm mt-1 mb-0">{{ task.time }}</p>
+                    </div>
+                </td>
+    
+                <!-- Tuesday Schedule  -->
+                <td class="w-30rem">
+                    <div class="bg-blue-50 border-round-lg p-3 my-2 w-20rem lg:w-auto" *ngFor="let task of taskRow.tuesday">
+                        <h3 class="text-base lg:text-lg font-semibold my-0">{{ task.title }}</h3>
+                        <p class="my-2 text-sm">{{ task.detail }}</p>
+                        <p class="flex justify-content-end font-semibold text-sm mt-1 mb-0">{{ task.time }}</p>
+                    </div>
+                </td>
+    
+                <!-- Wednesday Schedule  -->
+                <td class="w-30rem">
+                    <div class="bg-blue-50 border-round-lg p-3 my-2 w-20rem lg:w-auto" *ngFor="let task of taskRow.wednesday">
+                        <h3 class="text-base lg:text-lg font-semibold my-0">{{ task.title }}</h3>
+                        <p class="my-2 text-sm">{{ task.detail }}</p>
+                        <p class="flex justify-content-end font-semibold text-sm mt-1 mb-0">{{ task.time }}</p>
+                    </div>
+                </td>
+    
+                <!-- Thursday Schedule  -->
+                <td class="w-30rem">
+                    <div class="bg-blue-50 border-round-lg p-3 my-2 w-20rem lg:w-auto" *ngFor="let task of taskRow.thursday">
+                        <h3 class="text-base lg:text-lg font-semibold my-0">{{ task.title }}</h3>
+                        <p class="my-2 text-sm">{{ task.detail }}</p>
+                        <p class="flex justify-content-end font-semibold text-sm mt-1 mb-0">{{ task.time }}</p>
+                    </div>
+                </td>
+    
+                <!-- Friday Schedule  -->
+                <td class="w-30rem">
+                    <div class="bg-blue-50 border-round-lg p-3 my-2 w-20rem lg:w-auto" *ngFor="let task of taskRow.friday">
+                        <h3 class="text-base lg:text-lg font-semibold my-0">{{ task.title }}</h3>
+                        <p class="my-2 text-sm">{{ task.detail }}</p>
+                        <p class="flex justify-content-end font-semibold text-sm mt-1 mb-0">{{ task.time }}</p>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</section>
